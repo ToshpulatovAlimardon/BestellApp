@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BestellApp</title>
+
+    <!-- Box icons -->
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Icon title link -->
+    <link rel="icon" href="assets/images/burger.svg" />
+
+    <!-- Css link -->
+    <link rel="stylesheet" href="assets/css/component.css" />
+    <link rel="stylesheet" href="assets/css/general.css" />
+
+    <!-- Current JS -->
+    <script src="assets/js/script.js" defer></script>
+  </head>
+  <body>
+    <!-- Topbar -->
+    <div id="topbar">
+      <!-- Topbar Logo -->
+      <div class="topbar-logo">
+        <img src="assets/images/logo.png" alt="" />
+      </div>
+    </div>
+    <div class="container">
+      <!-- Header -->
+      <div id="header">
+        <!-- Header Content -->
+        <div class="header-content">
+          <!-- Header content image -->
+          <div class="header-content-img">
+            <img src="assets/images/Header/header-bg.jpeg" alt="" />
+          </div>
+          <!-- Dish Content -->
+          <div class="dish-content">
+            <div class="dish-item">
+              <h3>${dish.name}</h3>
+              <p>${dish.description}</p>
+              <div class="dish-price">
+                <h4>€${dish.price.toFixed(2)}</h4>
+                <button>
+                  <img src="assets/images/Header/cart.svg" alt="" />
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <input type="checkbox" id="navbar-status" />
+        <label class="navbar-toggler" for="navbar-status">
+          <i class="bx bxs-cart-alt"></i>
+        </label>
+
+        <!-- Header Menu -->
+        <div class="header-menu">
+          <h2>Warenkorb</h2>
+          <div class="cart-item"></div>
+          <div class="total-price-content">
+            <p class="total-price">Total: €0.00</p>
+            <button id="poppup" onclick="orderDish()">
+              <img src="assets/images/Header/trash.svg" alt="" />
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

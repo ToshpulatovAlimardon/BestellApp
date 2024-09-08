@@ -1,0 +1,367 @@
+/* Topbar */
+#topbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: var(--primary-color);
+  box-shadow: 0 4px 5px var(--shadow-color);
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Topbar Logo */
+#topbar .topbar-logo img {
+  height: 60px;
+}
+
+@media screen and (max-width: 550px) {
+  /* Topbar */
+  #topbar {
+    height: 60px;
+  }
+
+  /* Topbar Logo */
+  #topbar .topbar-logo img {
+    height: 50px;
+  }
+}
+
+/* Header */
+#header {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  margin-top: 90px;
+}
+
+/* Header Content */
+#header .header-content {
+  width: 65%;
+}
+
+.header-content .header-content-img {
+  width: 100%;
+  height: 250px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 10px var(--shadow-color);
+  margin-bottom: 20px;
+}
+
+.header-content-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Dish Content */
+.dish-item {
+  box-shadow: 0 0 10px var(--shadow-color);
+  margin-bottom: 20px;
+  border-radius: 10px;
+  padding: 30px;
+}
+
+.dish-item h3 {
+  font-size: 44px;
+  margin-bottom: 10px;
+}
+
+.dish-item p {
+  font-size: 16px;
+  color: var(--text-color);
+  margin-bottom: 20px;
+}
+
+.dish-item .dish-price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.dish-price h4 {
+  font-size: 36px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+  color: var(--primary-color);
+}
+
+.dish-price button {
+  background-color: var(--primary-color);
+  border: none;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.dish-price button img {
+  width: 40px;
+  height: 40px;
+}
+
+/* Header Menu */
+#header .header-menu {
+  width: 29%;
+  height: 85vh;
+  padding: 30px;
+  box-shadow: 0 0 10px var(--shadow-color);
+  border-radius: 10px;
+  margin-bottom: 20px;
+  position: fixed;
+  top: 90px;
+  right: 110px;
+  background-color: #fff;
+}
+
+.header-menu h2 {
+  font-size: 44px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.header-menu .cart-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.header-menu .cart-item p {
+  font-size: 16px;
+  margin-right: 10px;
+  margin-bottom: 20px;
+  color: var(--text-color);
+}
+
+.cart-item button {
+  background-color: var(--primary-color);
+  border: none;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.cart-item button img {
+  width: 17px;
+  height: 17px;
+}
+
+.header-menu .total-price-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 2px solid var(--primary-color);
+  padding-top: 10px;
+}
+
+.header-menu .total-price-content p {
+  font-size: 32px;
+  font-weight: 600;
+  color: var(--primary-color);
+}
+
+.total-price-content button {
+  background-color: var(--primary-color);
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.total-price-content button img {
+  width: 25px;
+  height: 25px;
+}
+
+@media screen and (max-width: 1242px) {
+  /* Header Content */
+  #header .header-content {
+    width: 60%;
+  }
+
+  /* Header Menu */
+  #header .header-menu {
+    width: 33%;
+    right: 70px;
+  }
+}
+
+/* Menu */
+.navbar-toggler {
+  color: #fff;
+  font-size: 32px;
+  visibility: hidden;
+  position: fixed;
+  top: 90px;
+  right: 20px;
+  background-color: #fc6f09;
+  border-radius: 50%;
+  padding: 10px;
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#navbar-status {
+  display: none;
+}
+
+@media screen and (max-width: 1000px) {
+  /* Header Content */
+  #header .header-content {
+    width: 100%;
+  }
+
+  /* Header Menu */
+  #header .header-menu {
+    width: 50%;
+    top: 90px;
+    left: 10px;
+  }
+
+  /* Menu media */
+  .navbar-toggler {
+    visibility: visible;
+  }
+
+  .header-menu {
+    transform: translateX(calc(-100% - 10px));
+    transition: transform 0.3s;
+  }
+
+  #navbar-status:checked ~ .header-menu {
+    transform: translateX(0);
+  }
+}
+
+@media screen and (max-width: 730px) {
+  /* Header Menu */
+  #header .header-menu {
+    width: 75%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  /* Header */
+  #header {
+    margin-top: 80px;
+  }
+
+  /* Header Content */
+  #header .header-content {
+    width: 100%;
+  }
+
+  .header-content .header-content-img {
+    height: 200px;
+    margin-bottom: 15px;
+  }
+
+  /* Dish Content */
+  .dish-item {
+    margin-bottom: 15px;
+    padding: 20px;
+  }
+
+  .dish-item h3 {
+    font-size: 36px;
+    margin-bottom: 5px;
+  }
+
+  .dish-item p {
+    font-size: 15px;
+    line-height: 18px;
+    margin-bottom: 10px;
+  }
+
+  .dish-price h4 {
+    font-size: 26px;
+  }
+
+  .dish-price button {
+    width: 40px;
+    height: 40px;
+  }
+
+  .dish-price button img {
+    width: 25px;
+    height: 25px;
+  }
+
+  /* Header Menu */
+  #header .header-menu {
+    width: 75%;
+    height: 86vh;
+    padding: 20px;
+    top: 80px;
+  }
+
+  .header-menu h2 {
+    font-size: 36px;
+    margin-bottom: 10px;
+  }
+
+  .header-menu .cart-item {
+    margin-bottom: 5px;
+  }
+
+  .header-menu .cart-item p {
+    font-size: 15px;
+    margin-right: 5px;
+    margin-bottom: 10px;
+  }
+
+  .cart-item button {
+    width: 25px;
+    height: 25px;
+    margin-bottom: 10px;
+  }
+
+  .cart-item button img {
+    width: 15px;
+    height: 15px;
+  }
+
+  .header-menu .total-price-content {
+    padding-top: 7px;
+  }
+
+  .header-menu .total-price-content p {
+    font-size: 24px;
+  }
+
+  .total-price-content button {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  .total-price-content button img {
+    width: 18px;
+    height: 18px;
+  }
+}

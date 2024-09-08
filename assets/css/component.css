@@ -1,0 +1,44 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Sevillana&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 1242px) {
+  .container {
+    width: 90%;
+  }
+}
+
+ul li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Sevillana", cursive;
+  font-weight: 400;
+}
+
+:root {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+
+  --text-color: #555;
+  --primary-color: #fc6f09;
+  --shadow-color: #999;
+}
